@@ -75,6 +75,8 @@ class WebPage(object):
 
         url : str
         verify: bool
+        custom_headers: dict
+            Dictionary that allow send custom headers on request
         """
         response = requests.get(
             url, headers=custom_headers, verify=verify, timeout=2.5)
